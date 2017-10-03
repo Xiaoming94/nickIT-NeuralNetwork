@@ -66,14 +66,19 @@ if not ready:
 print("reading data")
 readable = process_data("english")
 readable.extend(process_data("swedish"))
+
 print("creating alphabet")
 alphabet = create_alphabet(readable)
+
 print("generating rubish")
 not_readable = rand_words(alphabet,1,20,len(readable))
+
 print("labeling readable words")
 labels = label_data(readable,"readable")
+
 print("labeling non-readable-words")
 labels.extend(label_data(not_readable,"not-readable"))
+
 
 
 print("==== Script Done ====")
